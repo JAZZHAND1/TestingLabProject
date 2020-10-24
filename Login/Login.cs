@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace Login
 {
     public partial class Login : Form
-    {    
-
+    {
         public Login()
         {
             InitializeComponent();
@@ -20,12 +19,10 @@ namespace Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            List<User_Credentials> users = new List<User_Credentials>();
             User_Credentials dummy = new User_Credentials();
-            users.Add(new User_Credentials() {ID1 = dummy.return_ID(), Username = "Mushfiq", Password = "abc1234" });
-            Console.WriteLine(users[0].ID1);
-            users.Add(new User_Credentials() { ID1 = dummy.return_ID(), Username = "Nawsad", Password = "cat1234" });
-            Console.WriteLine(users[1].ID1);
+            List<User_Credentials> users = new List<User_Credentials>();
+            users.Add(new User_Credentials() {ID1 = dummy.return_ID(), Username = "Mushfiq", Password = "abc1234",Email="abc.com" });
+            users.Add(new User_Credentials() {ID1 = dummy.return_ID(), Username = "Nawsad", Password = "cat1234",Email="cat.com"});
             string given_username = txtUser.Text;
             string given_password = txtPass.Text;
             bool status = false;

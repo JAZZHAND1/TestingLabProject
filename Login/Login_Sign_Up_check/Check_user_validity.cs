@@ -10,8 +10,7 @@ namespace Login
 {
     class Check_user_validity
     {
-        public string username;
-        public string password;
+         
         public bool  loginstatus = false;
         public string username_status;
         public string password_status;
