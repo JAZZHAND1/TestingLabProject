@@ -19,24 +19,18 @@ namespace Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            User_Credentials dummy = new User_Credentials();
-            List<User_Credentials> users = new List<User_Credentials>();
-            users.Add(new User_Credentials() {ID1 = dummy.return_ID(), Username = "Mushfiq", Password = "abc1234",Email="abc.com" });
-            users.Add(new User_Credentials() {ID1 = dummy.return_ID(), Username = "Nawsad", Password = "cat1234",Email="cat.com"});
             string given_username = txtUser.Text;
             string given_password = txtPass.Text;
-            bool status = false;
-
+            bool status;
+           // Check_user_validity validity = new Check_user_validity();
+            List<User_Credentials> users = JSONSerialization.ReadFromJsonFile<List<User_Credentials>>("C:/Users.txt");
             foreach (var user in users)
             {
                 string username = user.Username, password = user.Password;
-                Check_user_validity validity = new Check_user_validity();
-                status = validity.authenticate_user(username, password, given_username, given_password);
-                if(status == true)
-                {
-                    break;
-                }
+                Check_user_validity.authenticate_user(username, password, given_username, given_password);
+         
             }
+            Check_user_validity.Show_Messagebox();
 
         }
 

@@ -69,6 +69,7 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Credentials.cs" />
+    <Compile Include="User_data_read_and_write\JSONSerialization.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,11 +105,9 @@
       <Name>AgeOfVillagers</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="User_data_read_and_write\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="User_Credential_Data\Users.txt" />
+    <Content Include="Login_Sign_Up_check\User_Credential_Data\Users.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
