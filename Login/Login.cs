@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,15 +22,7 @@ namespace Login
         {
             string given_username = txtUser.Text;
             string given_password = txtPass.Text;
-            bool status;
-           // Check_user_validity validity = new Check_user_validity();
-            List<User_Credentials> users = JSONSerialization.ReadFromJsonFile<List<User_Credentials>>("C:/Users.txt");
-            foreach (var user in users)
-            {
-                string username = user.Username, password = user.Password;
-                Check_user_validity.authenticate_user(username, password, given_username, given_password);
-         
-            }
+            Search_user_list.find_user(given_username, given_password);
             Check_user_validity.Show_Messagebox();
 
         }

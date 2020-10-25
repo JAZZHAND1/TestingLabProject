@@ -57,31 +57,42 @@ namespace Login
                 return false;
             }
         }
-        public static void Show_Messagebox()
+        public static string Show_Messagebox()
         {
             Console.WriteLine(username_status);
             Console.WriteLine(password_status);
+            string message="";
             if (username_status == "Empty" || password_status == "Empty")
             {
-                MessageBox.Show("username or password cannot be empty");
-                
+                message ="username or password cannot be empty";
+                MessageBox.Show(message);
+                return message;
             }
             else if(username_status == "Correct" && password_status == "Correct")
             {
-                MessageBox.Show("Successful");
+                message = "Successful";
+                MessageBox.Show(message);
+                return message;
             }
             else if(username_status == "Correct" && password_status == "Incorrect")
             {
-                MessageBox.Show("Invalid Password");
+                message = "Invalid Password";
+                MessageBox.Show(message);
+                return message;
             }
             else if (username_status == "Incorrect" && password_status == "Correct")
             {
-                MessageBox.Show("Invalid Username");
+                message = "Invalid Username";
+                MessageBox.Show(message);
+                return message;
             }
             else if(username_status == "Incorrect" && password_status == "Incorrect")
             {
-                MessageBox.Show("Invalid Username and Password");
+                message = "Invalid Username and Password";
+                MessageBox.Show(message);
+                return message;
             }
+            return message;
         }
         public static bool login_status()
         {

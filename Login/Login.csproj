@@ -59,6 +59,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_Sign_Up_check\Search_user_list.cs" />
     <Compile Include="Login_Sign_Up_check\Sign_Up_validate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

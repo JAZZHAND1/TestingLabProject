@@ -1350,6 +1350,9 @@
         }
       },
       "Login/1.0.0": {
+        "dependencies": {
+          "AgeOfVillagers": "1.0.0"
+        },
         "runtime": {
           "Login.exe": {}
         }
