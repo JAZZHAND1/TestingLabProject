@@ -31,8 +31,8 @@ namespace Login
            
             else if (match.Success==false)
             {
-                MessageBox.Show("Invalid Email Address");
-                return "Invalid Email Address";
+                MessageBox.Show("Please enter a valid email address");
+                return "Please enter a valid email address";
             }
             else if (password.Length <=8)
             {
